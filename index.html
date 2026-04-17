@@ -13,12 +13,16 @@
   <meta name="ICBM" content="-33.8915, 151.2767">
   <meta property="og:title" content="Plumber Bondi Beach &amp; Eastern Suburbs | Tapped Out Plumbing">
   <meta property="og:description" content="Licensed plumber in Bondi Beach &amp; Eastern Suburbs Sydney. Burst pipes, hot water, blocked drains, gas leaks &amp; luxury fitouts. 5-star rated. Call 0434 025 412.">
+  <meta property="og:image" content="https://tappedoutplumbingservices.com.au/assets/photos/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tappedoutplumbingservices.com.au">
   <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Plumber Bondi Beach | Tapped Out Plumbing | 0434 025 412">
   <meta name="twitter:description" content="Top-rated licensed plumber in Bondi Beach &amp; Eastern Suburbs. Emergency plumbing, hot water, burst pipes &amp; more.">
+  <meta name="twitter:image" content="https://tappedoutplumbingservices.com.au/assets/photos/preview.png">
   <link rel="canonical" href="https://tappedoutplumbingservices.com.au">
   <meta name="description" content="Tapped Out Plumbing Services - your local licensed plumber in Bondi Beach & Eastern Suburbs. Burst pipes, hot water, gas leaks, blocked drains. Call 0434 025 412.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -386,7 +390,7 @@
       background: var(--navy);
       margin-top: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: -4px;
     }
     @media(min-width:1024px){ #hero { margin-top: 0; } }
@@ -420,7 +424,7 @@
       .hero-inner {
         grid-template-columns: 1fr 360px 420px;
         align-items: end;
-        padding: 80px 48px 0;
+        padding: 30px 48px 0;
         gap: 32px;
       }
     }
@@ -432,6 +436,20 @@
       backdrop-filter: blur(8px);
       border-radius: 50px; padding: 8px 20px; margin-bottom: 24px;
     }
+    .hero-mobile-text .hero-rating {
+      display: none;
+    }
+    @media(min-width:1100px){
+      .hero-mobile-text .hero-rating { display: inline-flex; }
+    }
+    .hero-rating-mobile {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    @media(min-width:1100px){ .hero-rating-mobile { display: none; } }
     .hero-rating .stars { color: #f59e0b; font-size: 18px; letter-spacing: 2px; }
     .hero-rating span { color: #fff; font-size: 15px; font-weight: 600; }
 
@@ -489,6 +507,36 @@
       justify-content: center;
     }
     @media(min-width:1100px){ .hero-mascot-col { display: flex; } }
+
+    /* Mobile two-column top row */
+    .hero-mobile-top {
+      display: grid;
+      grid-template-columns: 1fr 110px;
+      align-items: end;
+      gap: 8px;
+      margin-bottom: 16px;
+      margin-top: 16px;
+    }
+    .hero-mobile-text {
+      min-width: 0;
+    }
+    .hero-mobile-mascot {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .hero-mascot-img-mobile {
+      width: 100px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(27,114,190,0.5));
+    }
+    @media(min-width:1100px){
+      .hero-mobile-top { display: block; }
+      .hero-mobile-mascot { display: none; }
+    }
+
     .hero-mascot-img {
       height: 520px; width: auto;
       object-fit: contain;
@@ -1174,8 +1222,8 @@
         gap: 32px;
       }
       .hero-h1 {
-        font-size: clamp(44px, 12vw, 64px);
-        margin-bottom: 16px;
+        font-size: clamp(28px, 7.5vw, 40px);
+        margin-bottom: 12px;
       }
       .hero-h1 .sub-line {
         font-size: clamp(16px, 4.5vw, 20px);
@@ -1192,11 +1240,21 @@
         margin-bottom: 20px;
       }
       .hero-rating {
-        padding: 6px 14px;
+        padding: 6px 12px;
         margin-bottom: 16px;
+        white-space: nowrap;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        border-radius: 50px;
       }
-      .hero-rating .stars { font-size: 15px; }
-      .hero-rating span { font-size: 13px; }
+      .hero-mobile-text .hero-rating {
+        width: 100%;
+        display: flex;
+      }
+      .hero-rating .stars { font-size: 13px; }
+      .hero-rating span { font-size: 11px; }
       .trust-badge { font-size: 12px; padding: 6px 12px; }
       .hero-form-card {
         padding: 24px 18px;
@@ -1445,15 +1503,24 @@
 
     <!-- Left: Content -->
     <div class="hero-content">
-      <div class="hero-rating" aria-label="5 star Google rating">
+      <!-- Mobile: rating pill full width, then two-col below -->
+      <div class="hero-rating hero-rating-mobile" aria-label="5 star Google rating">
         <span class="stars" aria-hidden="true">★★★★★</span>
         <span>5-Star Google Rated · 8 Reviews</span>
       </div>
-      <p class="hero-eyebrow">Tapped Out Plumbing Services · Bondi Beach</p>
-      <h1 class="hero-h1">
-        Bondi's <span class="highlight">#1</span><br>Plumber<br>
-        <span class="sub-line">Bondi Beach &amp; Eastern Suburbs</span>
-      </h1>
+      <div class="hero-mobile-top">
+        <div class="hero-mobile-text">
+          <p class="hero-eyebrow">Tapped Out Plumbing Services · Bondi Beach</p>
+          <h1 class="hero-h1">
+            Bondi's <span class="highlight">#1</span><br>Plumber<br>
+            <span class="sub-line">Bondi Beach &amp; Eastern Suburbs</span>
+          </h1>
+        </div>
+        <div class="hero-mobile-mascot">
+          <img src="assets/logos/tapped-out-logo-white-bg.png" alt="Tapped Out Plumbing mascot" class="hero-mascot-img-mobile">
+        </div>
+      </div>
+      <!-- Below row: full width -->
       <p class="hero-sub">Fast, reliable plumbing across Bondi Beach, Coogee, Randwick, Bronte, Rose Bay &amp; all Eastern Suburbs. Burst pipes, hot water, gas leaks &amp; more.</p>
       <a href="tel:0434025412" class="hero-phone-btn" aria-label="Call 0434 025 412">
         <svg viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
