@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://tappedoutplumbing.com.au/</loc>
+    <loc>https://tappedoutplumbingservices.com.au/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,37 +11,37 @@
 
   <!-- Service anchors - Google will index these as entry points -->
   <url>
-    <loc>https://tappedoutplumbing.com.au/#services</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#services</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tappedoutplumbing.com.au/#hotwater</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#hotwater</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tappedoutplumbing.com.au/#luxury</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#luxury</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tappedoutplumbing.com.au/#tapware</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#tapware</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tappedoutplumbing.com.au/#filtration</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#filtration</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tappedoutplumbing.com.au/#contact</loc>
+    <loc>https://tappedoutplumbingservices.com.au/#contact</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
